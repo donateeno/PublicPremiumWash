@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PREMIUM WASH JUN–SEP 2026 | EVE Kitchen</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #c8102e;
+    --red-dark: #a00d24;
+    --red-light: #f5e6e9;
+    --red-mid: #e8c0c8;
+    --black: #1a1a1a;
+    --gray-dark: #444;
+    --gray: #888;
+    --gray-light: #f2f2f2;
+    --white: #ffffff;
+    --yes-bg: #e8f5e9;
+    --yes-text: #2e7d32;
+    --yes-border: #a5d6a7;
+    --no-bg: #f5f5f5;
+    --no-text: #9e9e9e;
+    --discount35-bg: #fff8e1;
+    --discount35-text: #e65100;
+    --discount35-border: #ffcc02;
+    --set-bg: #e3f2fd;
+    --set-text: #1565c0;
+    --set-border: #90caf9;
+    --promo-bg: #fce4ec;
+    --promo-text: #880e4f;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Sarabun', sans-serif;
+    background: #f8f8f8;
+    color: var(--black);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* HEADER */
+  .header {
+    background: var(--red);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(200,16,46,0.25);
+  }
+  .header-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-box {
+    background: white;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--red);
+    letter-spacing: 2px;
+  }
+  .header-title {
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.9);
+    letter-spacing: 0.5px;
+  }
+  .header-badge {
+    margin-left: auto;
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+
+  /* HERO BAND */
+  .hero {
+    background: linear-gradient(135deg, var(--red-dark) 0%, var(--red) 60%, #e8203c 100%);
+    padding: 36px 28px 32px;
+  }
+  .hero-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .hero h1 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+  .hero h1 span {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0.82;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+  }
+  .hero-meta {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .meta-tag {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 4px;
+    padding: 4px 12px;
+    color: white;
+    font-size: 12.5px;
+    font-weight: 500;
+  }
+  .meta-tag.highlight {
+    background: rgba(255,255,255,0.95);
+    color: var(--red);
+    font-weight: 700;
+    border-color: transparent;
+  }
+
+  /* LEGEND */
+  .legend-bar {
+    background: white;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 12px 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    position: sticky;
+    top: 56px;
+    z-index: 90;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .legend-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+  }
+  .legend-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 4px;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 4px;
+    padding: 3px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid;
+  }
+  .badge.yes { background: var(--yes-bg); color: var(--yes-text); border-color: var(--yes-border); }
+  .badge.no { background: var(--no-bg); color: var(--no-text); border-color: #e0e0e0; }
+  .badge.d35 { background: var(--discount35-bg); color: var(--discount35-text); border-color: var(--discount35-border); }
+  .badge.set { background: var(--set-bg); color: var(--set-text); border-color: var(--set-border); }
+  .badge.promo { background: var(--promo-bg); color: var(--promo-text); border-color: var(--red-mid); }
+
+  /* FILTER */
+  .filter-bar {
+    background: var(--gray-light);
+    padding: 14px 28px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .filter-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  .filter-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-dark);
+  }
+  .filter-btn {
+    background: white;
+    border: 1.5px solid #ddd;
+    border-radius: 4px;
+    padding: 5px 14px;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 12.5px;
+    cursor: pointer;
+    color: var(--gray-dark);
+    transition: all 0.18s;
+    font-weight: 500;
+  }
+  .filter-btn:hover, .filter-btn.active {
+    background: var(--red);
+    color: white;
+    border-color: var(--red);
+  }
+  .search-box {
+    margin-left: auto;
+    padding: 6px 14px;
+    border: 1.5px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 13px;
+    min-width: 220px;
+    outline: none;
+    transition: border-color 0.18s;
+  }
+  .search-box:focus { border-color: var(--red); }
+
+  /* MAIN TABLE AREA */
+  .main-wrap {
+    max-width: 1600px;
+    margin: 24px auto;
+    padding: 0 20px;
+  }
+
+  .section-title {
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--red);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--red);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 18px;
+    background: var(--red);
+    border-radius: 2px;
+  }
+
+  .table-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    overflow: hidden;
+    margin-bottom: 32px;
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+  }
+
+  /* Frozen cols */
+  .col-ean { min-width: 130px; width: 130px; }
+  .col-product { min-width: 200px; width: 200px; }
+  .col-price { min-width: 100px; width: 100px; text-align: right; }
+
+  thead tr.header-row-1 th {
+    background: var(--red);
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    padding: 10px 10px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.15);
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+  }
+  thead tr.header-row-1 th.sticky-col {
+    position: sticky;
+    z-index: 3;
+    background: var(--red-dark);
+  }
+  thead tr.header-row-1 th:first-child { left: 0; }
+  thead tr.header-row-1 th:nth-child(2) { left: 130px; }
+  thead tr.header-row-1 th:nth-child(3) { left: 330px; }
+
+  thead tr.header-row-2 th {
+    background: #2a2a2a;
+    color: #f0f0f0;
+    padding: 6px 8px;
+    text-align: center;
+    border: 1px solid #444;
+    font-size: 10.5px;
+    font-weight: 500;
+    white-space: nowrap;
+    vertical-align: bottom;
+  }
+  thead tr.header-row-2 th.sticky-col {
+    position: sticky;
+    z-index: 3;
+    background: #222;
+  }
+  thead tr.header-row-2 th:first-child { left: 0; }
+  thead tr.header-row-2 th:nth-child(2) { left: 130px; }
+  thead tr.header-row-2 th:nth-child(3) { left: 330px; }
+
+  thead tr.price-row th {
+    background: #111;
+    color: #ccc;
+    padding: 4px 8px;
+    text-align: center;
+    border: 1px solid #333;
+    font-size: 10px;
+    white-space: nowrap;
+    font-weight: 400;
+  }
+  thead tr.price-row th.sticky-col {
+    position: sticky;
+    z-index: 3;
+    background: #111;
+  }
+  thead tr.price-row th:first-child { left: 0; }
+  thead tr.price-row th:nth-child(2) { left: 130px; }
+  thead tr.price-row th:nth-child(3) { left: 330px; }
+
+  tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.12s;
+  }
+  tbody tr:hover { background: #fef6f7 !important; }
+  tbody tr:nth-child(odd) { background: #fafafa; }
+  tbody tr.hidden-row { display: none; }
+
+  tbody td {
+    padding: 7px 8px;
+    text-align: center;
+    border-right: 1px solid #f0f0f0;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .sticky-td {
+    position: sticky;
+    z-index: 2;
+    border-right: 2px solid #eee;
+  }
+  .sticky-td:first-child { left: 0; background: inherit; }
+  .sticky-td:nth-child(2) { left: 130px; background: inherit; }
+  .sticky-td:nth-child(3) { left: 330px; background: inherit; }
+
+  .ean-text { font-size: 11px; color: var(--gray); font-family: monospace; }
+  .product-name { font-weight: 600; text-align: left; font-size: 13px; color: var(--black); }
+  .price-text { font-weight: 700; color: var(--red); font-size: 13px; text-align: right; }
+
+  /* Cell badges */
+  .cell-yes { 
+    display: inline-block;
+    width: 28px; height: 22px;
+    background: var(--yes-bg);
+    color: var(--yes-text);
+    border-radius: 3px;
+    font-size: 11px; font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+  }
+  .cell-no {
+    display: inline-block;
+    width: 22px; height: 22px;
+    background: #f0f0f0;
+    color: #bbb;
+    border-radius: 3px;
+    font-size: 10px;
+    line-height: 22px;
+    text-align: center;
+  }
+  .cell-d35 {
+    display: inline-block;
+    padding: 2px 6px;
+    background: var(--discount35-bg);
+    color: var(--discount35-text);
+    border-radius: 3px;
+    font-size: 10px; font-weight: 700;
+    white-space: nowrap;
+    border: 1px solid var(--discount35-border);
+  }
+  .cell-set {
+    display: inline-block;
+    padding: 2px 6px;
+    background: var(--set-bg);
+    color: var(--set-text);
+    border-radius: 3px;
+    font-size: 10px; font-weight: 700;
+    border: 1px solid var(--set-border);
+  }
+  .cell-promo {
+    display: inline-block;
+    padding: 2px 5px;
+    background: var(--promo-bg);
+    color: var(--promo-text);
+    border-radius: 3px;
+    font-size: 9.5px; font-weight: 700;
+    border: 1px solid var(--red-mid);
+  }
+
+  /* PRICE HEADER */
+  .faucet-price {
+    font-size: 9px;
+    color: #999;
+    display: block;
+    margin-top: 1px;
+  }
+
+  /* TERMS BOX */
+  .terms-wrap {
+    max-width: 1600px;
+    margin: 0 auto 32px;
+    padding: 0 20px;
+  }
+  .terms-box {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    overflow: hidden;
+  }
+  .terms-header {
+    background: var(--red);
+    padding: 12px 20px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+  }
+  .terms-body {
+    padding: 20px;
+  }
+  .terms-body ol {
+    padding-left: 20px;
+  }
+  .terms-body li {
+    margin-bottom: 8px;
+    color: var(--gray-dark);
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+  .terms-body li strong { color: var(--red); }
+  .terms-body ul { padding-left: 18px; margin-top: 6px; }
+  .terms-body ul li { font-size: 12.5px; margin-bottom: 5px; }
+
+  /* PROMO EXTRA BOX */
+  .promo-extra {
+    margin: 0 20px 24px;
+    max-width: 1600px;
+    margin: 0 auto 24px;
+    padding: 0 20px;
+  }
+  .promo-card {
+    background: linear-gradient(135deg, #fff8e1, #fff3cd);
+    border: 1.5px solid #ffcc02;
+    border-radius: 8px;
+    padding: 16px 20px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .promo-icon {
+    font-size: 28px;
+    line-height: 1;
+  }
+  .promo-text h3 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #e65100;
+    margin-bottom: 4px;
+  }
+  .promo-text p {
+    font-size: 13px;
+    color: #5d4037;
+    line-height: 1.6;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #1a1a1a;
+    padding: 20px 28px;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+  }
+  footer span { color: var(--red); }
+
+  /* SCROLL CUE */
+  .scroll-cue {
+    text-align: right;
+    font-size: 11px;
+    color: var(--gray);
+    margin-bottom: 6px;
+    padding-right: 4px;
+  }
+
+  /* STICKY PRODUCT COL */
+  tbody tr:nth-child(odd) .sticky-td { background: #fafafa; }
+  tbody tr:nth-child(even) .sticky-td { background: white; }
+  tbody tr:hover .sticky-td { background: #fef6f7; }
+
+  .note-row td {
+    background: #fef6f7 !important;
+    font-size: 11.5px;
+    color: #777;
+    font-style: italic;
+    text-align: left;
+    padding-left: 12px;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 20px; }
+    .header-inner { padding: 10px 14px; }
+    .filter-inner { flex-direction: column; align-items: flex-start; }
+    .search-box { width: 100%; min-width: unset; }
+    .main-wrap, .terms-wrap, .promo-extra { padding: 0 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo-area">
+      <div class="logo-box">EVE</div>
+      <span class="header-title">ตารางโปรโมชั่น Premium Wash</span>
+    </div>
+    <div class="header-badge">มิถุนายน – กันยายน 2026</div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <h1>
+      ซื้อซิงค์ แถมก๊อกน้ำ
+      <span>ตารางโปรโมชั่น PREMIUM WASH ประจำเดือนมิถุนายน – กันยายน 2026</span>
+    </h1>
+    <div class="hero-meta">
+      <span class="meta-tag highlight">📅 มิ.ย. – ก.ย. 2569</span>
+      <span class="meta-tag">🏪 บุญถาวร & SCG HOME เท่านั้น</span>
+      <span class="meta-tag">Rev.00</span>
+    </div>
+  </div>
+</div>
+
+<!-- LEGEND BAR -->
+<div class="legend-bar">
+  <div class="legend-inner">
+    <span class="legend-label">สัญลักษณ์:</span>
+    <span class="badge yes">✓ YES</span>
+    <span style="font-size:11.5px;color:#666"> = แถมฟรี (ราคาเต็ม)</span>
+    <span class="badge d35">ลด 35%</span>
+    <span style="font-size:11.5px;color:#666"> = แถมในราคาลด 35%</span>
+    <span class="badge set">SET</span>
+    <span style="font-size:11.5px;color:#666"> = ซื้อเป็นชุดเซต</span>
+    <span class="badge promo">แถมปกติ</span>
+    <span style="font-size:11.5px;color:#666"> = แถมในราคาปกติ</span>
+    <span class="badge no">—</span>
+    <span style="font-size:11.5px;color:#666"> = ไม่ร่วมรายการ</span>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <div class="filter-inner">
+    <span class="filter-label">กรองสินค้า:</span>
+    <button class="filter-btn active" onclick="filterTable('all')">ทั้งหมด</button>
+    <button class="filter-btn" onclick="filterTable('UNDERMOUNT')">UNDERMOUNT</button>
+    <button class="filter-btn" onclick="filterTable('MIRACLE')">MIRACLE</button>
+    <button class="filter-btn" onclick="filterTable('CARBONYTE')">CARBONYTE</button>
+    <button class="filter-btn" onclick="filterTable('ROSEGOLD')">ROSEGOLD</button>
+    <button class="filter-btn" onclick="filterTable('ROMA')">ROMA</button>
+    <button class="filter-btn" onclick="filterTable('NEROLUX')">NEROLUX</button>
+    <button class="filter-btn" onclick="filterTable('CRESTSTONE')">CRESTSTONE</button>
+    <button class="filter-btn" onclick="filterTable('KNOX')">KNOX</button>
+    <button class="filter-btn" onclick="filterTable('ANDES')">ANDES</button>
+    <button class="filter-btn" onclick="filterTable('PATIA')">PATIA</button>
+    <input class="search-box" type="text" placeholder="🔍 ค้นหาชื่อสินค้า..." oninput="searchTable(this.value)">
+  </div>
+</div>
+
+<!-- PROMO EXTRA -->
+<div style="max-width:1600px;margin:20px auto 0;padding:0 20px;">
+  <div class="promo-card">
+    <div class="promo-icon">🔥</div>
+    <div class="promo-text">
+      <h3>โปรโมชั่นพิเศษเพิ่มเติม: แถมฟรี หัวมงกุฏ</h3>
+      <p>ซื้อเตาแก๊สรุ่น <strong>HB78-2BBL/BG</strong>, <strong>HB78-3BBL/BG</strong>, <strong>HB60-4BBL/BG</strong>, <strong>HBS76-2MBFB/SS</strong> — แถมฟรีหัวมงกุฏ 1 ชิ้น ต่อการสั่งซื้อ (เตาแก๊สรุ่น BBTA ไม่อนุมัติ เนื่องจากมีให้อยู่แล้ว)</p>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN TABLE -->
+<div class="main-wrap" style="margin-top:20px;">
+  <div class="section-title">ตารางซิงค์ล้างจาน &amp; ก๊อกน้ำที่ร่วมรายการ</div>
+  <div class="scroll-cue">← เลื่อนดูก๊อกน้ำที่ร่วมรายการ →</div>
+  <div class="table-container">
+    <div class="table-scroll">
+      <table id="mainTable">
+        <thead>
+          <tr class="header-row-1">
+            <th class="sticky-col col-ean" rowspan="3">EAN13</th>
+            <th class="sticky-col col-product" rowspan="3">รายละเอียดสินค้า</th>
+            <th class="sticky-col col-price" rowspan="3">ราคาขาย*<br><small style="font-weight:400;font-size:10px;opacity:0.8">(ห้ามขายต่ำกว่า)</small></th>
+            <th colspan="29" style="letter-spacing:1px;">รายการก๊อกน้ำแถม</th>
+          </tr>
+          <tr class="header-row-2">
+            <th>BELLE</th>
+            <th>ANGULAR</th>
+            <th>VINA 3</th>
+            <th>VINA 3<br>EP BLACK</th>
+            <th>ZENO</th>
+            <th>ZENO<br>EP BLACK</th>
+            <th>MODI</th>
+            <th>MODI<br>EP BLACK</th>
+            <th>TUNO</th>
+            <th>LIVO</th>
+            <th>LUCA</th>
+            <th>DOVER</th>
+            <th>DOVER<br>BLACK</th>
+            <th>TWILIGHT<br>PLUS</th>
+            <th>AZTAC II<br>BLACK</th>
+            <th>AZTAC II<br>GRAY</th>
+            <th>LEXI<br>BLACK</th>
+            <th>LEXI<br>GRAY</th>
+            <th>LEXI<br>WHITE EP</th>
+            <th>LEXI<br>INOX</th>
+            <th>LEXI<br>ROSEGOLD</th>
+            <th>LEXI<br>GUNMETAL EP</th>
+            <th>ADRA</th>
+            <th>ARDO</th>
+            <th>TRINITY<br>PLUS</th>
+            <th>TRINITY PLUS<br>GUNMETAL</th>
+            <th>TRIO</th>
+            <th>ZION<br>GUNMETAL EP</th>
+            <th>MIRA 3<br>BLACK PVD</th>
+          </tr>
+          <tr class="price-row">
+            <th>385</th><th>690</th><th>4,990</th><th>4,990</th><th>3,990</th><th>3,990</th>
+            <th>3,990</th><th>3,990</th><th>2,990</th><th>2,990</th><th>2,590</th><th>2,290</th>
+            <th>2,790</th><th>2,790</th><th>6,990</th><th>6,990</th><th>6,990</th><th>6,990</th>
+            <th>7,990</th><th>6,990</th><th>7,990</th><th>7,990</th><th>9,990</th><th>8,990</th>
+            <th>8,990</th><th>8,990</th><th>10,990</th><th>7,990</th><th>9,990</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- TERMS -->
+<div class="terms-wrap">
+  <div class="section-title">เงื่อนไขโปรโมชั่น</div>
+  <div class="terms-box">
+    <div class="terms-header">📋 เงื่อนไขและข้อกำหนด</div>
+    <div class="terms-body">
+      <ol>
+        <li>ขอสงวนสิทธิ์ในการแก้ไข โดยจะมีการแจ้งให้ทราบล่วงหน้า</li>
+        <li><strong>เฉพาะช่องทางบุญถาวรและ SCG HOME เท่านั้น</strong> เว้นแต่การขอกรณีพิเศษที่ระบุไว้ในกระดานราคาอนุมัติพิเศษ</li>
+        <li>สามารถใช้โปรโมชั่นแถมและส่วนลดตามตารางได้ต่อเมื่อลูกค้าซื้อซิงค์ล้างจานในราคาตามที่ระบุไว้ และร้านคู่ค้ามีส่วนลดการค้ามาตรฐานเท่านั้น</li>
+        <li>โปรโมชั่นนี้ <strong>ไม่สามารถ</strong>เข้าร่วมโปรโมชั่นเสริมอื่นๆ เช่น ส่วนลด On top, ผ่อน 0% หรือโปรโมชั่นแถมอื่นๆ และไม่สามารถนำยอดซื้อไปรวมมูลค่าเพื่อรับส่วนลดอื่นๆ ภายในแบรนด์</li>
+        <li>สินค้าของแถมต้องถูกระบุในใบเสร็จการซื้อ (ใบสั่งขาย/ใบส่งของ) และส่งพร้อมสินค้าหลักทุกครั้ง</li>
+        <li><strong>สำหรับพนักงาน:</strong>
+          <ul>
+            <li>กรณีซื้อซิงค์แล้วเลือกแถมก๊อกน้ำ หรือเครื่องบดเศษอาหาร — จะ<strong>ไม่สามารถ</strong>เบิกค่าคอมมิชชั่นรายตัวในรายการสินค้าทั้งรายการซื้อและรายการแถม</li>
+            <li>กรณีซื้อเตาแก๊สรุ่นที่กำหนด — สามารถเบิกค่าคอมมิชชั่นของเตาแก๊ส (ถ้ามี) ได้</li>
+            <li>กรณีซื้อซิงค์แล้วเลือกขายก๊อกน้ำในราคาลดพิเศษตามตาราง — สามารถเบิกค่าคอมมิชชั่นของซิงค์ได้ แต่ไม่สามารถเบิกค่าคอมมิชชั่นของรายการที่ลดราคาพิเศษ</li>
+            <li>รายการแถมฟรีก๊อกน้ำ — พนักงานสามารถเลือกใช้ส่วนลด <strong>50%</strong> สำหรับก๊อกน้ำ และยังเบิกค่าคอมมิชชั่นของซิงค์ในราคาปกติได้</li>
+            <li>ในกรณีใช้โปรโมชั่นซื้อซิงค์แถมก๊อกน้ำ — ยังสามารถใช้โปรโมชั่นแลกซื้อเครื่องบดเศษอาหารในราคาลด 50% ได้ (รุ่นต้องตรงตามตาราง)</li>
+            <li>ซิงค์และก๊อกน้ำรุ่น GOLD และ ROSEGOLD สามารถใช้เงื่อนไขโปรโมชั่นร่วมกันได้</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 <span>EVE Kitchen</span> — ตารางโปรโมชั่น PREMIUM WASH | มิถุนายน – กันยายน 2026 | เฉพาะช่องทาง <span>บุญถาวร & SCG HOME</span></p>
+</footer>
+
+<script>
+// ======= DATA =======
+const products = [
+  { ean: "8851737210710", name: "UNDERMOUNT 544/444", price: "6,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","ลด 35%"] },
+  { ean: "8851737210727", name: "UNDERMOUNT 750/450", price: "7,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%"] },
+  { ean: "8851737210734", name: "UNDERMOUNT 760/445", price: "6,990", cells: ["YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO","NO","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO","ลด 35%","NO","NO","NO","NO","NO","NO","NO"] },
+  { ean: "8851737200278", name: "KUBE 860/500", price: "10,990", cells: ["แถมปกติ","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","ลด 35%"] },
+  { ean: "8851737044063", name: "UMI 750/460", price: "7,990", cells: ["YES","แถมปกติ","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO","NO","NO","NO","ลด 35%","NO"] },
+  { ean: "8851737044278", name: "ELITE 800/490", price: "9,990", cells: ["YES","แถมปกติ","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","ลด 35%"] },
+  { ean: "8851737044711", name: "NAVI 752/452", price: "8,990", cells: ["YES","แถมปกติ","YES","YES","YES","YES","ลด 35%","ลด 35%","YES","YES","YES","YES","YES","ลด 35%","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO"] },
+  { ean: "8851737044407", name: "UNITY 800/490", price: "9,990", cells: ["YES","แถมปกติ","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","YES","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO","NO","ลด 35%","NO","—"] },
+  { ean: "8851737208519", name: "MIRACLE 560/510", price: "5,990", cells: ["YES","ลด 35%","NO","NO","NO","NO","NO","NO","NO","NO","ลด 35%","SET","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO"] },
+  { ean: "8851737208526", name: "MIRACLE 760/510", price: "7,990", cells: ["YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","YES","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO","NO","NO","NO","ลด 35%","NO"] },
+  { ean: "8851737208540", name: "MIRACLE 860/510 LH", price: "8,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","NO"] },
+  { ean: "8851737208724", name: "MIRACLE 860/510 RH", price: "8,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","NO"] },
+  { ean: "8851737208557", name: "MIRACLE 1000/510 LH", price: "9,590", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","NO"] },
+  { ean: "8851737208564", name: "MIRACLE 1000/510 RH", price: "9,590", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","NO"] },
+  { ean: "8851737205266", name: "MIRACLE 1000/510 2B", price: "9,990", cells: ["YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","YES","YES","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO"] },
+  { ean: "8851737208571", name: "MIRACLE 1200/510 LH", price: "10,990", cells: ["YES","YES","YES","YES","YES","YES","ลด 35%","ลด 35%","YES","YES","YES","YES","YES","ลด 35%","YES","YES","YES","YES","YES","YES","ลด 35%","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO"] },
+  { ean: "8851737208588", name: "MIRACLE 1200/510 RH", price: "10,990", cells: ["YES","YES","YES","YES","YES","YES","ลด 35%","ลด 35%","YES","YES","YES","YES","YES","ลด 35%","YES","YES","YES","YES","YES","YES","ลด 35%","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO"] },
+  { ean: "8851737208595", name: "CARBONYTE 560/520", price: "7,990", cells: ["YES","YES","NO","NO","NO","SET","NO","NO","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO"] },
+  { ean: "8851737208601", name: "CARBONYTE 810/520", price: "9,990", cells: ["YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO","NO","NO","NO","ลด 35%","NO"] },
+  { ean: "8851737208717", name: "CARBONYTE 1000/520 2B", price: "12,990", cells: ["YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO","NO","ลด 35%","NO"] },
+  { ean: "8851737208618", name: "CARBONYTE 1000/520 LH", price: "11,990", cells: ["YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO"] },
+  { ean: "8851737208625", name: "CARBONYTE 1000/520 RH", price: "11,990", cells: ["YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO"] },
+  { ean: "8851737208632", name: "CARBONYTE 1200/520 LH", price: "12,990", cells: ["ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO","ลด 35%","NO","NO","NO","NO","NO","ลด 35%","NO"] },
+  { ean: "8851737208644", name: "CARBONYTE 1200/520 RH", price: "12,990", cells: ["ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO","ลด 35%","NO","NO","NO","NO","NO","ลด 35%","NO"] },
+  { ean: "8851737202524", name: "ROSEGOLD 560/520", price: "9,990", cells: ["YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","ลด 35%","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","SET","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO","NO","ลด 35%","NO"] },
+  { ean: "8851737202517", name: "ROSEGOLD 810/520", price: "12,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","ลด 35%"] },
+  { ean: "8851737202531", name: "ROSEGOLD 885/520", price: "14,990", cells: ["YES","YES","YES","ลด 35%","YES","YES","ลด 35%","ลด 35%","YES","YES","YES","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%"] },
+  { ean: "8851737214718", name: "ROMA 750/480 BLACK", price: "11,990", cells: ["YES","YES","YES","YES","YES","SET","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","ลด 35%"] },
+  { ean: "8851737214817", name: "ROMA 750/480 SUPER GREY", price: "11,990", cells: ["YES","YES","YES","YES","YES","SET","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","ลด 35%"] },
+  { ean: "8851737214725", name: "NEROLUX 600/500 BLACK", price: "9,990", cells: ["YES","YES","YES","SET: 10,990","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","NO"] },
+  { ean: "8851737214732", name: "NEROLUX 600/500 SUPER GREY", price: "9,990", cells: ["YES","YES","YES","SET: 10,990","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","NO"] },
+  { ean: "8851737214725", name: 'NEROLUX 600/500 BLACK "PRO12"', price: "9,990", cells: ["YES","YES","YES","SET: 10,990","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","NO"] },
+  { ean: "8851737214732", name: 'NEROLUX 600/500 SUPER GREY "PRO12"', price: "9,990", cells: ["YES","YES","YES","SET: 10,990","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","NO"] },
+  { ean: "8851737202166", name: "PHILIP 800/520 BLACK", price: "10,990", cells: ["YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","YES","YES","YES","YES","ลด 35%","ลด 35%","ลด 35%","SET","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO"] },
+  { ean: "8851737202173", name: "PHILIP 800/520 MATT WHITE", price: "10,990", cells: ["YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","YES","YES","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","SET","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO"] },
+  { ean: "8851737213865", name: "WAVE 855/495 MATT WHITE", price: "13,990", cells: ["YES","SET","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES"] },
+  { ean: "8851737200452", name: "CRESTSTONE 980/490 BLACK", price: "18,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES"] },
+  { ean: "8851737200469", name: "CRESTSTONE 980/490 SUPER GREY", price: "18,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES"] },
+  { ean: "8851737200452", name: 'CRESTSTONE 980/490 BLACK "PRO12"', price: "18,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES"] },
+  { ean: "8851737200469", name: 'CRESTSTONE 980/490 SUPER GREY "PRO12"', price: "18,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES"] },
+  { ean: "8851737210581", name: "PRIME 860/500 BLACK", price: "10,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%"] },
+  { ean: "8851737210598", name: "PRIME 860/500 GRAY", price: "10,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","SET","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%"] },
+  { ean: "8851737213421", name: "PHONIX 900/480 BLACK", price: "10,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","SET","YES","YES","YES","YES","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","ลด 35%"] },
+  { ean: "8851737213433", name: "PHONIX 900/480 GRAY", price: "10,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","SET","YES","YES","YES","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","ลด 35%"] },
+  { ean: "8851737213384", name: "KNOX 1000/500 BLACK", price: "10,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%"] },
+  { ean: "8851737213391", name: "KNOX 1000/500 GRAY", price: "10,990", cells: ["YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","YES","YES","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO"] },
+  { ean: "8851737213407", name: "KNOX 1160/500 BLACK", price: "11,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","ลด 35%"] },
+  { ean: "8851737213414", name: "KNOX 1160/500 GRAY", price: "11,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","SET","YES","YES","YES","YES","YES","YES","YES","ลด 35%","ลด 35%","ลด 35%","ลด 35%","YES","ลด 35%"] },
+  { ean: "8851737212974", name: "EUROSTONE 1160/500 BLACK", price: "11,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%"] },
+  { ean: "8851737212387", name: "ANDES 760/480 BLACK", price: "10,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","SET","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%"] },
+  { ean: "8851737212448", name: "ANDES 760/480 GRAY", price: "10,990", cells: ["YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","SET","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","YES","ลด 35%"] },
+  { ean: "8851737210642", name: "PATIA 570/500 BLACK", price: "5,990", cells: ["YES","YES","NO","NO","NO","NO","NO","NO","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO"] },
+  { ean: "8851737210659", name: "PATIA 570/500 GRAY", price: "5,990", cells: ["YES","YES","NO","NO","NO","NO","NO","NO","ลด 35%","ลด 35%","ลด 35%","ลด 35%","ลด 35%","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO","NO"] },
+];
+
+function cellHTML(val) {
+  if (!val || val === 'NO' || val === '—') return '<span class="cell-no">—</span>';
+  if (val === 'YES') return '<span class="cell-yes">✓</span>';
+  if (val.startsWith('ลด 35%')) return '<span class="cell-d35">-35%</span>';
+  if (val.startsWith('ลด 50%')) return '<span class="cell-d35" style="border-color:#f48fb1;color:#880e4f;background:#fce4ec;">-50%</span>';
+  if (val.startsWith('SET')) return `<span class="cell-set" title="${val}">SET</span>`;
+  if (val === 'แถมปกติ') return '<span class="cell-promo">ปกติ</span>';
+  return `<span style="font-size:10px;color:#555;">${val}</span>`;
+}
+
+function renderTable(data) {
+  const tbody = document.getElementById('tableBody');
+  tbody.innerHTML = '';
+  data.forEach((p, i) => {
+    const tr = document.createElement('tr');
+    const yesCount = p.cells.filter(c => c === 'YES' || c === 'แถมปกติ').length;
+    const d35Count = p.cells.filter(c => c && c.startsWith('ลด 35%')).length;
+    let cells = `
+      <td class="sticky-td"><span class="ean-text">${p.ean}</span></td>
+      <td class="sticky-td"><span class="product-name">${p.name}</span></td>
+      <td class="sticky-td"><span class="price-text">฿${p.price}</span></td>
+    `;
+    p.cells.forEach(c => { cells += `<td>${cellHTML(c)}</td>`; });
+    tr.innerHTML = cells;
+    tr.dataset.name = p.name.toUpperCase();
+    tbody.appendChild(tr);
+  });
+}
+
+renderTable(products);
+
+let currentFilter = 'all';
+let currentSearch = '';
+
+function filterTable(keyword) {
+  currentFilter = keyword;
+  currentSearch = '';
+  document.querySelector('.search-box').value = '';
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  applyFilters();
+}
+
+function searchTable(val) {
+  currentSearch = val.toUpperCase();
+  currentFilter = 'all';
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.filter-btn')[0].classList.add('active');
+  applyFilters();
+}
+
+function applyFilters() {
+  document.querySelectorAll('#tableBody tr').forEach(tr => {
+    const name = tr.dataset.name || '';
+    const filterMatch = currentFilter === 'all' || name.includes(currentFilter);
+    const searchMatch = !currentSearch || name.includes(currentSearch);
+    tr.style.display = (filterMatch && searchMatch) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>
